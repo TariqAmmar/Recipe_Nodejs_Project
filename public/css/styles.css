@@ -1,0 +1,173 @@
+:root {
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+  --primary-color: #472dbb;
+  --secondary-color: #4565a0;
+  --background-gradient: linear-gradient(135deg, rgba(243, 243, 243, 0.8), rgba(200, 200, 200, 0.8));
+}
+
+body {
+  background: var(--background-gradient), url("/img/i-like-food.svg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--bs-font-sans-serif);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container-xxl {
+  max-width: 1530px;
+  margin: 0 auto;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Category Card */
+.category__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.category__link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  border-radius: 8px;
+  transition: box-shadow 250ms ease;
+}
+
+.category__img:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.category__img--large {
+  height: 330px;
+}
+
+.category__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Form Login */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.form-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 250ms ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(71, 45, 187, 0.5);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 250ms ease, transform 100ms ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.submit-btn:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+p {
+  margin-top: 15px;
+  text-align: center;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
